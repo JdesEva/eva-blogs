@@ -1,0 +1,3 @@
+[submodule "eva-bot-source"]
+	path = eva-bot-source
+	url = git@gitee.com:Jdeshz/eva-bot-source.git

@@ -3,6 +3,8 @@
         "antd",
         "rrweb",
         "stylelint",
-        "tailwindcss"
+        "tailwindcss",
+        "vlog",
+        "Xigma"
     ]
 }
