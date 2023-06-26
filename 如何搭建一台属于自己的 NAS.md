@@ -4,17 +4,17 @@
 
 NAS 想必很多同学都听过，即网络附加存储（Network Attached Storage），它主要干的事情就是储存，主打一个大容量，几十 TB 的储存大小那是正常的情况，并且还能构建磁盘阵列（RAID），使数据更加安全。
 
-![我的 NAS](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/IMG_20230208_203410.jpg)
+![我的 NAS](https://pangji-home.com/eva_blogs/IMG_20230208_203410.jpg)
 
 NAS 某种程度上来说可以认为是云盘，但是它又不仅仅只是云盘，以我的 NAS 为例，尽管主要功能就是干储存，但是它还可以挂远程下载资源、资源收集、数据同步等等功能，甚至还被我直接拉过来当成自有服务器了~
 
-![群晖的照片管理套件](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/WX20230626-101904@2x.png)
+![群晖的照片管理套件](https://pangji-home.com/eva_blogs/WX20230626-140159%402x.png)
 
 > 看我的 NAS 上，都是我家猫的照片，再也不用出 iCloud 等云盘的会员费了！
 
 NAS 现在都讲究 `ALL IN ONE`，即什么都在里面，什么都有，特别是现在的主营 NAS 的一些厂商，都为 NAS 提供了 Docker，直接将 NAS 的使用广度扩宽了好几个数量级，本来 NAS 还只是能干干储存的脏活累活，好家伙，加了 Docker，等于直接化身家庭服务器，不仅能干储存，还能运行服务。
 
-![NAS 的 Docker](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/WX20230626-102015@2x.png)
+![NAS 的 Docker](https://pangji-home.com/eva_blogs/WX20230626-102015%402x.png)
 
 > 我的 NAS 上运行着饥荒联机版的服务器、还有自己测试用的 Sentry 平台等等
 
@@ -34,7 +34,7 @@ NAS 现在都讲究 `ALL IN ONE`，即什么都在里面，什么都有，特别
 
 上面这还只是照片，如果本身我们拍了个 vlog，那显然这些储存空间就更加不够用了，万一我们换手机了，那手机的照片怎么办？这又是需要倒腾的一个内容。
 
-![群晖套件](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/WechatIMG18.jpeg)
+![群晖套件](https://pangji-home.com/eva_blogs/WechatIMG18.jpeg)
 
 而有了 NAS，则可以将手机中的照片、文件、视频等同步到自己的 NAS 上，可以后台闲时同步，一般而言，速度很快。以我家为例，速度可以达到 20MB/s + 的上传速度，而下载速度，则可以达到 140 ~ 200 MB/s。如果说在云盘上传输要达到这个速度，基本是不可能的。
 
@@ -55,9 +55,9 @@ RAID 是一项将多块硬盘组合起来，组成一个阵列储存的形式，
 
 当我们组成了 RAID 之后，再配合定期备份重要数据，有条件的上个 UPS 电源，并且将重要数据定期冷备份，那基本就没了后顾之忧了。而且有个好处就是，储存在自己的 NAS 上的东西，不用担心被篡改（~~不用担心变成 8 秒教育片了~~），特别是没有公网 IP 的情况下，因为有物理隔离，外网无法访问。
 
-![滑稽保命](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/WX20230626-123249@2x.png)
+![滑稽保命](https://pangji-home.com/eva_blogs/WX20230626-123249%402x.png)
 
-上面是 NAS 的总总好处，下面就是搭建属于自己的 NAS 了。
+上面是 NAS 的种种好处，下面就是搭建属于自己的 NAS 了。
 
 当然，如果图省事儿可以直接购买 NAS 厂商提供的成品，比较著名的是群晖和威联通。这两个各有优点，本文也不是带货文，没有广告费，就不多说这个了。我们选择自己 DIY，自己动手才是真的快乐，这是属于男人的浪漫！
 
@@ -87,7 +87,7 @@ RAID 是一项将多块硬盘组合起来，组成一个阵列储存的形式，
 
 > 我的真的喜欢我现在的这个机箱，它也最贵...其实如果对外观没什么要求也可以不用买这么好的，我是看上了它全金属机箱，十分的赛博朋克！
 
-![NAS](eva-bot-source/images/WX20230626-133920@2x.png)
+![NAS](https://pangji-home.com/eva_blogs/WX20230626-133920%402x.png)
 
 尽管现在储存都是白菜价，但是一旦需要买大容量的全新的储存，不论是 SSD，还是 HDD，都还是挺肉疼的。我的建议是去收大厂商剩下的硬盘，不为别的，便宜啊，比如我就收了几块某硬件厂商剩下的机械硬盘，香得很。当然，如果大家有钞能力，可以忽略我说的，直接上全新的 NAS 专用红盘。
 
@@ -113,7 +113,7 @@ NAS 系统有很多，其实也可以根据个人喜好随意安装，而最快�
 
 安装过程大家可以上网百度，唯一需要注意的是，如果是多个硬盘安装的话，需要修改 U 盘启动引导文件 `grub.cfg`，并且需要把里面的**硬盘标识符都改成 0**，不然无法自动识别，这一点网络上的教程搜不到，如果大家需要自己安装的话需要注意。下面是修改完成的一个举例
 
-![grub.cfg](https://gitee.com/Jdeshz/eva-bot-source/raw/master/images/WX20230626-130619@2x.png)
+![grub.cfg](https://pangji-home.com/eva_blogs/WX20230626-130619%402x.png)
 
 安装完成之后就可以进入群晖的系统页面，至于如何玩转群晖，大家可以百度，我就不在赘述了~
 
